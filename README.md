@@ -15,7 +15,7 @@ keeps it honest — into *your* project. Then it proves the result sound before 
 &nbsp;![Domain agnostic](https://img.shields.io/badge/domain-agnostic-0d7d74)
 &nbsp;![Zero dependencies](https://img.shields.io/badge/dependencies-0-6a787c)
 
-![A linear SDLC — brainstorm, spec, plan, build, review, test, release — transformed by graph engineering into a guarded graph with branches, a debug cycle, and typed terminal states](docs/assets/traditional-vs-graph-sdlc.png)
+![A linear SDLC — brainstorm, spec, plan, implement, review, release — transformed by graph engineering into an executable graph with typed nodes, guarded edges, bounded loops, durable state, and three typed terminal states: merge, publish, discard](docs/assets/traditional-vs-graph-sdlc.png)
 
 ---
 
