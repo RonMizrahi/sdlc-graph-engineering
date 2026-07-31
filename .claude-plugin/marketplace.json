@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "sdlc-graph-engineering",
+  "description": "Turn any multi-step process into a guarded graph a machine can actually execute — typed nodes, total exit guards, bounded retry loops, durable run state, and a ledger of every step that could not run.",
+  "owner": {
+    "name": "Ron Mizrahi",
+    "email": "ronmizr@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "sdlc-graph-engineering",
+      "displayName": "SDLC Graph Engineering",
+      "source": "./plugins/sdlc-graph-engineering",
+      "description": "Installs graph engineering into a project that has none: turns an existing process — skills, a runbook, a CI config, or a description — into a guarded graph with typed nodes, total exit guards, bounded retry loops, a run-state file, a skipped-step ledger, its own auditor, and an executable eval suite. Domain-agnostic; needs no other plugin installed.",
+      "version": "0.6.0",
+      "category": "workflow",
+      "tags": [
+        "graph",
+        "state-machine",
+        "workflow",
+        "sdlc",
+        "scaffolding",
+        "resumable"
+      ]
+    }
+  ]
+}
