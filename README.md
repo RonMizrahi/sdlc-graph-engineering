@@ -136,6 +136,59 @@ than a missing guard.
 
 ---
 
+## Where the loops are
+
+> "I don't prompt Claude anymore. I have loops running that prompt Claude and figuring out what to do.
+> **My job is to write loops.**"
+> — Boris Cherny, Head of Claude Code, [June 2026](https://thenewstack.io/loop-engineering/)
+
+A loop needs two things: something that **starts** it, and something that **ends** it. Loop
+engineering is mostly about the first. **This plugin is about the second.**
+
+Three layers get confused with each other constantly:
+
+| Layer | What it is | Where it lives | Ends on |
+|---|---|---|---|
+| **The outer loop** | what causes a run to *begin* — `/loop`, `/goal`, a routine, a cron, a CI hook | outside the graph entirely | a schedule, a condition, or you |
+| **The graph's cycles** | every retry path *inside* one run — a failing test, a red build, a rejected review | `edges.md`, each with a declared bound | its bound, then a stated behaviour |
+| **The deliberate exception** | a human revising *their own* decision | the same table, marked **unbounded** | the person, when they're satisfied |
+
+**The graph is what one iteration of the outer loop does.** An outer loop wrapped around an unbounded
+inner one is the thing that runs all night and reports success in the morning.
+
+### The data, from the shipped example
+
+[superpowers-graph](https://github.com/RonMizrahi/superpowers-graph) — 21 nodes, 96 guarded edges —
+declares **9 bounded cycles and 4 deliberately unbounded**, every one of them in a single table with
+its exhaustion behaviour:
+
+| Cycle | Bound | On exhaustion |
+|---|---|---|
+| `IMPLEMENT` ↻ | **3** | `BLOCKED` |
+| `TASK_REVIEW` ↻ | **3** | `BLOCKED` |
+| `FIX_ROUND` ↻ | **5** | `ADJUDICATE` — the breaker, not another retry |
+| `DEBUG` ↻ | **3** | `BLOCKED` — three failed fixes is a wrong architecture, not a fourth attempt |
+| `INTEGRATE` → `DISCARD` → `INTEGRATE` | **2** | `HANDOFF` — a twice-mistyped deletion is not a prompting problem |
+| `BRAINSTORM` ↻ · `SPEC` ↻ | **unbounded** | — a human revising their own design is a conversation, not a retry |
+
+Three rules do the work, and each exists because of a specific way loops fail:
+
+- **Count per item, never globally.** `attempts["IMPLEMENT:7"]` and `attempts["IMPLEMENT:8"]` are
+  separate budgets — task 8 starts fresh while task 7 is stuck. A global counter conflates them.
+- **Never reset a counter, only key it.** A reset hands a stuck loop an unlimited budget, and it
+  contradicts resume. Where one node is entered from several callers, key it by caller too —
+  superpowers-graph uses `attempts["DEBUG:<return_to>:<item>"]`, so a baseline investigation cannot
+  spend the budget a merge failure needs.
+- **Add a global ceiling anyway.** Every cycle can sit inside its own bound while the run as a whole
+  never converges. superpowers-graph halts at **500 transitions**, derived from a 20-task plan
+  spending every bound it has.
+
+And the exception is stated out loud rather than left as an oversight: the four unbounded cycles all
+have a human on the other side revising their *own* decision. Bounding those would cut off the
+cheapest correction available and turn a conversation into a failure.
+
+---
+
 ## What ships with it
 
 | File | Load at | Contents |
