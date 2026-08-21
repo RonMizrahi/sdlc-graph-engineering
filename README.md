@@ -19,6 +19,14 @@ keeps it honest — into *your* project. Then it proves the result sound before 
 
 ---
 
+## Watch it work
+
+<video src="https://github.com/RonMizrahi/sdlc-graph-engineering/releases/download/demo-assets/sdlc-graph-demo-2min.mp4" controls muted playsinline width="100%"></video>
+
+Two minutes, no audio. Not seeing a player? [Watch it on YouTube](https://www.youtube.com/watch?v=qrY74MvaVoU).
+
+---
+
 ## Example output
 
 Example — superpowers as a graph (by [obra/superpowers](https://github.com/obra/superpowers)),
