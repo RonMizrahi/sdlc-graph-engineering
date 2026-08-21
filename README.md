@@ -21,7 +21,13 @@ keeps it honest — into *your* project. Then it proves the result sound before 
 
 ## Watch it work
 
-<video src="https://github.com/RonMizrahi/sdlc-graph-engineering/releases/download/demo-assets/sdlc-graph-demo-2min.mp4" controls muted playsinline width="100%"></video>
+VARIANT-BARE
+
+https://github.com/RonMizrahi/sdlc-graph-engineering/releases/download/demo-assets/sdlc-graph-demo-2min.mp4
+
+VARIANT-IMG
+
+![demo](https://github.com/RonMizrahi/sdlc-graph-engineering/releases/download/demo-assets/sdlc-graph-demo-2min.mp4)
 
 Two minutes, no audio. Not seeing a player? [Watch it on YouTube](https://www.youtube.com/watch?v=qrY74MvaVoU).
 
