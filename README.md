@@ -21,9 +21,9 @@ keeps it honest — into *your* project. Then it proves the result sound before 
 
 ## Watch it work
 
-[![Watch the 2-minute demo](https://img.youtube.com/vi/qrY74MvaVoU/maxresdefault.jpg)](https://www.youtube.com/watch?v=qrY74MvaVoU)
+https://github.com/user-attachments/assets/c717c1dc-214d-4b6b-8ad5-55dd5107baf1
 
-Two minutes, no audio. Click to play on YouTube.
+Two minutes, no audio. Not seeing a player? [Watch it on YouTube](https://www.youtube.com/watch?v=qrY74MvaVoU).
 
 ---
 
