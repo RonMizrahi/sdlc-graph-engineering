@@ -2,6 +2,9 @@
 
 https://github.com/user-attachments/assets/c717c1dc-214d-4b6b-8ad5-55dd5107baf1
 
+What you are watching is *my* graph running — not a graph this plugin ships. There is no bundled
+graph. The plugin turns **your** skills and process into one, and yours will look nothing like this.
+
 *Two minutes, no audio. Not seeing a player? [Watch it on YouTube](https://www.youtube.com/watch?v=qrY74MvaVoU).*
 
 **Turn the process you already have into a graph a machine can actually execute.**
