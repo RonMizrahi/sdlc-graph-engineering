@@ -1,5 +1,9 @@
 # SDLC Graph Engineering
 
+https://github.com/user-attachments/assets/c717c1dc-214d-4b6b-8ad5-55dd5107baf1
+
+*Two minutes, no audio. Not seeing a player? [Watch it on YouTube](https://www.youtube.com/watch?v=qrY74MvaVoU).*
+
 **Turn the process you already have into a graph a machine can actually execute.**
 
 A [Claude Code](https://code.claude.com) plugin that takes your existing process — a set of skills, a
