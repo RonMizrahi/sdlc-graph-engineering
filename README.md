@@ -21,15 +21,9 @@ keeps it honest — into *your* project. Then it proves the result sound before 
 
 ## Watch it work
 
-VARIANT-BARE
+[![Watch the 2-minute demo](https://img.youtube.com/vi/qrY74MvaVoU/maxresdefault.jpg)](https://www.youtube.com/watch?v=qrY74MvaVoU)
 
-https://github.com/RonMizrahi/sdlc-graph-engineering/releases/download/demo-assets/sdlc-graph-demo-2min.mp4
-
-VARIANT-IMG
-
-![demo](https://github.com/RonMizrahi/sdlc-graph-engineering/releases/download/demo-assets/sdlc-graph-demo-2min.mp4)
-
-Two minutes, no audio. Not seeing a player? [Watch it on YouTube](https://www.youtube.com/watch?v=qrY74MvaVoU).
+Two minutes, no audio. Click to play on YouTube.
 
 ---
 
